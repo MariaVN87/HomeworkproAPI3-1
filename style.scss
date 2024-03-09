@@ -1,0 +1,76 @@
+@import "vars";
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.center {
+   padding-left: calc(50% - $widthSite / 2);
+   padding-right: calc(50% - $widthSite / 2);
+}
+
+.photo-gallery {
+   padding-top: 30px;
+   text-align: center;
+   &__title {
+      font-size: 38px;
+   }
+   &__menu {
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      & input {
+         font-size: 15px;
+         text-align: center;
+         width: 60px;
+         height: 20px;
+      }
+   }
+   &__list {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+   }
+   &__item {
+      overflow: hidden;
+      background: #eaeaea;
+      border-radius: 20px;
+      &-wrap {
+         width: calc(($widthSite - 30px) / 3);
+         height: 350px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      &-img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+      &-info {
+         font-size: 20px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         & .fa {
+            cursor: pointer;
+         }
+      }
+   }
+   &__name-photographer {
+      text-align: left;
+      width: 150px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 20px;
+   }
+}
+
+.like {
+   width: 120px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
